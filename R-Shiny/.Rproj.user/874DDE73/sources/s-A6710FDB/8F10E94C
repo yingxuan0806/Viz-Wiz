@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1585632395354.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3092996271",
+    "id" : "8F10E94C",
+    "lastKnownWriteTime" : 1585632523,
+    "last_content_update" : 1585632523544,
+    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/R-Shiny/server/dashboard.R",
+    "project_path" : "server/dashboard.R",
+    "properties" : {
+        "cursorPosition" : "21,2",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

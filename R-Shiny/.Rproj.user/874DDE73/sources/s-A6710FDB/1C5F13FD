@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1585632450307.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1C5F13FD",
+    "lastKnownWriteTime" : 1585632463,
+    "last_content_update" : 1585632463859,
+    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/R-Shiny/server/plot1.R",
+    "project_path" : "server/plot1.R",
+    "properties" : {
+        "cursorPosition" : "2,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,40 @@
+dashboardSidebar(
+  #add content to sidebar
+  sidebarMenu(
+    menuItem(
+      "Home", tabName = "home", icon = icon("home")
+    ),
+    
+    menuItem(
+      "Leaderboard", tabName = "leaderboard", icon = icon("medal"),
+      
+      menuSubItem(
+        "Single Player", tabName = "single", icon = icon("user")
+      ),
+      menuSubItem(
+        "Multiplayer: Beginner", tabName = "multi_beginner", icon = icon("users")
+      ),
+      menuSubItem(
+        "Multiplayer: Novice", tabName = "multi_novice", icon = icon("users")
+      ),
+      menuSubItem(
+        "Multiplayer: Expert", tabName = "multi_expert", icon = icon("users")
+      )
+    ),
+    
+    menuItem(
+      "Personal Progress", tabName = "dashboard", icon = icon("dashboard")
+    ),
+    
+    menuItem(
+      "About", tabName = "about", icon = icon("info"),
+      
+      menuSubItem(
+        "Viz-Wiz", tabName = "vizwiz", icon = icon("gamepad")
+      ),
+      menuSubItem(
+        "The Team", tabName = "team", icon = icon("users-cog")
+      )
+    )
+  )
+)

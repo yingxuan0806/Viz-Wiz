@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1585578049541.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2388164739",
+    "id" : "86A57C33",
+    "lastKnownWriteTime" : 1585612178,
+    "last_content_update" : 1585612178087,
+    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/R-Shiny/ui/sidebar.R",
+    "project_path" : "ui/sidebar.R",
+    "properties" : {
+        "cursorPosition" : "5,6",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

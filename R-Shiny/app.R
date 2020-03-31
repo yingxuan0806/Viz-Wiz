@@ -1,0 +1,81 @@
+rm(list=ls())
+setwd("~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/R-Shiny")
+
+if (!require(shiny)) {
+  install.packages("shiny")
+  library(shiny)
+}
+
+if (!require(shinydasboard)) {
+  install.packages("shinydashboard")
+  library(shinydashboard)
+}
+
+
+# ui <- dashboardPage(
+#   title = "Split app code across multiple files",
+#   # include the UI for each tab
+#   source(file.path("ui", "tab1.R"),  local = TRUE)$value,
+#   # source("ui")
+#   source(file.path("ui", "tab2.R"),  local = TRUE)$value
+# )
+# 
+# server <- function(input, output) {
+#   # Include the logic (server) for each tab
+#   source(file.path("server", "tab1.R"),  local = TRUE)$value
+#   source(file.path("server", "tab2.R"),  local = TRUE)$value
+# }
+# 
+# shinyApp(ui = ui, server = server)
+
+ui <- dashboardPage(
+  # title = "Split app code across multiple files",
+  # include the UI for each tab
+  header = source(file.path("ui", "header.R"),  local = TRUE)$value,
+  # source("ui")
+  sidebar = source(file.path("ui", "sidebar.R"),  local = TRUE)$value,
+  body = source(file.path("ui", "body.R"), local = TRUE)$value
+)
+
+server <- function(input, output) {
+  # Include the logic (server) for each tab
+  
+  #histogram
+  source(file.path("server", "plot1.R"),  local = TRUE)$value
+  source(file.path("server", "dashboard.R"),  local = TRUE)$value
+  # set.seed(122)
+  # histdata <- rnorm(50)
+
+  # output$plot1 <- renderPlot({
+  #   data <- histdata[seq_len(input$slider)]
+  #   hist(data)
+  # })
+  
+  # output$total_gamesBox <- renderInfoBox({
+  #   infoBox(
+  #     "Total Games Played", "130", icon = icon("check-square"), color = "blue", fill = TRUE
+  #   )
+  # })
+  # 
+  # output$average_scoreBox <- renderInfoBox({
+  #   infoBox(
+  #     "Average Score", "123", icon = icon("balance-scale"), color = "red", fill = TRUE
+  #   )
+  # })
+  # # output$progressBox <- renderInfoBox({
+  # #   infoBox(
+  # #     "Progress", paste0(25 + input$count, "%"), icon = icon("list"), color = "purple"
+  # #   )
+  # # })
+  # # 
+  # output$high_scoreBox <- renderInfoBox({
+  #   infoBox(
+  #     "High Score", "349", icon = icon("star"), color = "yellow", fill = TRUE
+  #   )
+  # })
+  
+}
+
+shinyApp(ui = ui, server = server)
+
+# runApp("Leaderboard")
