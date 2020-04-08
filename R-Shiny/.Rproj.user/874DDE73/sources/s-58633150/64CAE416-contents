@@ -12,7 +12,10 @@ dashboardSidebar(
         "Single Player", tabName = "single", icon = icon("user")
       ),
       menuSubItem(
-        "Multiplayer: Beginner", tabName = "multi_beginner", icon = icon("users")
+        "Multiplayer: Beginner I", tabName = "multi_beginner_1", icon = icon("users")
+      ),
+      menuSubItem(
+        "Multiplayer: Beginner II", tabName = "multi_beginner_2", icon = icon("users")
       ),
       menuSubItem(
         "Multiplayer: Novice", tabName = "multi_novice", icon = icon("users")
