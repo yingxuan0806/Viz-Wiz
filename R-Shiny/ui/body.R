@@ -28,6 +28,12 @@ dashboardBody(
         infoBoxOutput("single_average_rounds")
       ),
       
+      fluidRow(
+        infoBoxOutput("single_best_accuracy"),
+        infoBoxOutput("single_average_accuracy"),
+        infoBoxOutput("download_data")
+      ),
+      
       dataTableOutput("test_table")
       
     ),
@@ -46,6 +52,11 @@ dashboardBody(
         infoBoxOutput("beg_1_average_score"),
         infoBoxOutput("beg_1_average_time"),
         infoBoxOutput("beg_1_average_rounds")
+      ),
+      
+      fluidRow(
+        infoBoxOutput("beg_1_best_accuracy"),
+        infoBoxOutput("beg_1_average_accuracy")
       )
     ),
 
@@ -63,6 +74,11 @@ dashboardBody(
         infoBoxOutput("beg_2_average_score"),
         infoBoxOutput("beg_2_average_time"),
         infoBoxOutput("beg_2_average_rounds")
+      ),
+      
+      fluidRow(
+        infoBoxOutput("beg_2_best_accuracy"),
+        infoBoxOutput("beg_2_average_accuracy")
       )
     ),
     
@@ -80,6 +96,11 @@ dashboardBody(
         infoBoxOutput("novice_average_score"),
         infoBoxOutput("novice_average_time"),
         infoBoxOutput("novice_average_rounds")
+      ),
+      
+      fluidRow(
+        infoBoxOutput("novice_best_accuracy"),
+        infoBoxOutput("novice_average_accuracy")
       )
     ),
 
@@ -97,6 +118,11 @@ dashboardBody(
         infoBoxOutput("expert_average_score"),
         infoBoxOutput("expert_average_time"),
         infoBoxOutput("expert_average_rounds")
+      ),
+      
+      fluidRow(
+        infoBoxOutput("expert_best_accuracy"),
+        infoBoxOutput("expert_average_accuracy")
       )
     ),
 
@@ -108,6 +134,13 @@ dashboardBody(
 #                       width = 4,
           #             box(
           # )))
+      selectInput(
+        inputId = "names",
+        label = "Names",
+        choices = name_list,
+        selected = NULL,
+        selectize = FALSE
+      ),
 
       fluidRow(
         #static info box

@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "6CD56263",
-    "lastKnownWriteTime" : 1586322448,
-    "last_content_update" : 1586322448600,
+    "lastKnownWriteTime" : 1586344553,
+    "last_content_update" : 1586344553774,
     "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/R-Shiny/server/novice.R",
     "project_path" : "server/novice.R",
     "properties" : {
-        "cursorPosition" : "30,0",
-        "scrollLine" : "0"
+        "cursorPosition" : "45,13",
+        "scrollLine" : "14"
     },
     "read_only" : false,
     "read_only_alternatives" : [

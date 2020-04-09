@@ -35,3 +35,16 @@ output$beg_1_average_rounds <- renderInfoBox({
     "Average Rounds Completed", "43", icon = icon("gamepad"), color = "maroon", fill = TRUE
   )
 })
+
+# THIRD ROW
+output$beg_1_best_accuracy <- renderInfoBox({
+  infoBox(
+    "Best Accuracy", "100%", icon = icon("bullseye"), color = "navy", fill = TRUE
+  )
+})
+
+output$beg_1_average_accuracy <- renderInfoBox({
+  infoBox(
+    "Average Accuracy", "75%", icon = icon("dot-circle"), color = "black", fill = TRUE
+  )
+})

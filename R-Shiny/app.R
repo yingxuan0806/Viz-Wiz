@@ -57,7 +57,7 @@ server <- function(input, output) {
   source(file.path("server", "expert.R"), local = TRUE)$value
   
 }
-
+name_list <- c("A", "B", "C")
 df <- read.csv("EngineDesign.csv")
 
 shinyApp(ui = ui, server = server)
