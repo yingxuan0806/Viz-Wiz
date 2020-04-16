@@ -1,19 +1,19 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1586320898334.000,
+    "created" : 1586320899505.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "36B946B8",
-    "lastKnownWriteTime" : 1586332493,
-    "last_content_update" : 1586332493390,
-    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/R-Shiny/server/beg_2.R",
-    "project_path" : "server/beg_2.R",
+    "id" : "6CD56263",
+    "lastKnownWriteTime" : 1586344553,
+    "last_content_update" : 1586344553774,
+    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/R-Shiny/server/novice.R",
+    "project_path" : "server/novice.R",
     "properties" : {
-        "cursorPosition" : "43,12",
-        "scrollLine" : "12"
+        "cursorPosition" : "45,13",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [

@@ -1,25 +1,25 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1585916128489.000,
+    "created" : 1585632395354.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "B1133CA3",
-    "lastKnownWriteTime" : 1585632463,
-    "last_content_update" : 1585632463,
-    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/R-Shiny/server/plot1.R",
-    "project_path" : "server/plot1.R",
+    "id" : "8F10E94C",
+    "lastKnownWriteTime" : 1586360599,
+    "last_content_update" : 1586360599529,
+    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/R-Shiny/server/dashboard.R",
+    "project_path" : "server/dashboard.R",
     "properties" : {
-        "cursorPosition" : "6,2",
+        "cursorPosition" : "23,0",
         "scrollLine" : "0",
         "tempName" : "Untitled1"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 7,
+    "relative_order" : 2,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"

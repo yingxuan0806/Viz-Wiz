@@ -21,6 +21,11 @@ if(!require(data.table)) {
   library(data.table)
 }
 
+if(!require(readxl)) {
+  install.packages("readxl")
+  library(readxl)
+}
+
 # ui <- dashboardPage(
 #   title = "Split app code across multiple files",
 #   # include the UI for each tab
@@ -57,6 +62,7 @@ server <- function(input, output) {
   source(file.path("server", "expert.R"), local = TRUE)$value
   
 }
+
 name_list <- c("A", "B", "C")
 df <- read.csv("EngineDesign.csv")
 
