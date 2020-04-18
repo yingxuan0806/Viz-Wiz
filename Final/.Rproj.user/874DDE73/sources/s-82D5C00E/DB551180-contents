@@ -21,7 +21,16 @@ if(!require(readxl)) {
   library(readxl)
 }
 
-name_list <- c("A", "B", "C")
+if(!require(dplyr)) {
+  install.packages("dplyr")
+  library(dplyr)
+}
+
+# name_list <- c("A", "B", "C")
+name_list <- c("Amy", "Bonnie", "Emma", "Jack", "James", "Lina", "Wayne")
+# aname_list <- c(unique(df["Name"]))
+# aname_list <- as.vector(unlist(aname_list))
+# name_list <- unlist(name_list, use.names = FALSE)
 
 df <- read_xlsx("Dataset.xlsx")
 df[9] <- round(df[9], digits = 2)
@@ -37,6 +46,8 @@ multi_beg1_df <- multi_df[multi_df$`Difficulty Level` == "Beginner 1",]
 multi_beg2_df <- multi_df[multi_df$`Difficulty Level` == "Beginner 2",]
 multi_novice_df <- multi_df[multi_df$`Difficulty Level` == "Novice",]
 multi_expert_df <- multi_df[multi_df$`Difficulty Level` == "Expert",]
+
+
 
 
 ui <- dashboardPage(

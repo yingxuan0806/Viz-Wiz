@@ -33,6 +33,8 @@ dashboardBody(
         infoBoxOutput("single_beg_1_average_accuracy"),
         infoBoxOutput("single_beg_1_download_data")
       ),
+      
+      h4("Ranking is determined based on High Score, followed by Accuracy, Average Time Taken per Round, then Number of Rounds Completed."),
       dataTableOutput("single_beg_1_table")
     ),
     
