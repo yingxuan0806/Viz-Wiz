@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587215945751.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E617175C",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1587215945751,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "48A31370",
+        "caption" : "sb1_ave_score_df",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=sb1_ave_score_df&cache_key=48A31370",
+        "displayedObservations" : "5",
+        "environment" : "",
+        "expression" : "sb1_ave_score_df",
+        "object" : "sb1_ave_score_df",
+        "preview" : "0",
+        "totalObservations" : "5",
+        "variables" : "2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

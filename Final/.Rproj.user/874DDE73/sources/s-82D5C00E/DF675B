@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587205998551.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DF675B",
+    "lastKnownWriteTime" : 140247862083584,
+    "last_content_update" : 1587205998551,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "62BD2802",
+        "caption" : "single_beg1_charts_df",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=single_beg1_charts_df&cache_key=62BD2802",
+        "displayedObservations" : "13",
+        "environment" : "",
+        "expression" : "single_beg1_charts_df",
+        "object" : "single_beg1_charts_df",
+        "preview" : "0",
+        "totalObservations" : "13",
+        "variables" : "6"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -7,11 +7,8 @@ sb1_average_rounds <- round(mean(single_beg1_df$`Number of Rounds Completed`, na
 sb1_best_accuracy <- max(single_beg1_df$`Accuracy Percentage`, na.rm = TRUE)
 sb1_average_accuracy <- round(mean(single_beg1_df$`Accuracy Percentage`, na.rm = TRUE), digits = 2)
 
-# sb1_table_shown <- subset(single_beg1_df, select = -c(4, 5))
-# sb1_table_shown <- subset(single_beg1_df, select = c(1, 2, 3, 7, 11, 10, 6, 8, 9))
-sb1_table_shown <- single_beg1_df[, c(1, 2, 3, 7, 11, 10, 6, 8, 9)]
 
-sb1_table_shown <- sb1_table_shown %>% arrange(desc(single_beg1_df$`High Score`), desc(single_beg1_df$`Accuracy Percentage`), single_beg1_df$`Average Time Taken per Round (sec)`, desc(single_beg1_df$`Number of Rounds Completed`), desc(single_beg1_df$`Score (cumulative)`), desc(single_beg1_df$`Average Score`), single_beg1_df$Date)
+
 
 output$single_beg_1_high_score <- renderInfoBox({
   infoBox(
@@ -81,7 +78,109 @@ output$single_beg_1_download <- downloadHandler(
 )
 
 # TABLE
+
+# sb1_table_shown <- subset(single_beg1_df, select = -c(4, 5))
+# sb1_table_shown <- subset(single_beg1_df, select = c(1, 2, 3, 7, 11, 10, 6, 8, 9))
+sb1_table_shown <- single_beg1_df[, c(1, 2, 3, 7, 11, 10, 6, 8, 9)]
+
+sb1_table_shown <- sb1_table_shown %>% arrange(desc(single_beg1_df$`High Score`), desc(single_beg1_df$`Accuracy Percentage`), single_beg1_df$`Average Time Taken per Round (sec)`, desc(single_beg1_df$`Number of Rounds Completed`), desc(single_beg1_df$`Score (cumulative)`), desc(single_beg1_df$`Average Score`), single_beg1_df$Date)
+
+
 output$single_beg_1_table <- DT::renderDataTable(sb1_table_shown)
 
 
+# GRAPHS
+
+min(single_beg1_charts_df$Age) # 3
+max(single_beg1_charts_df$Age) # 80
+
+sb1_age_3_12 <- 0
+sb1_age_13_18 <- 0
+sb1_age_19_29 <- 0
+sb1_age_30_50 <- 0
+sb1_age_51_80 <- 0
+
+index_sb1_age_3_12 <- c()
+index_sb1_age_13_18 <- c()
+index_sb1_age_19_29 <- c()
+index_sb1_age_30_50 <- c()
+index_sb1_age_51_80 <- c()
+
+
+
+for (i in 1:nrow(single_beg1_charts_df)) {
+  if (single_beg1_charts_df[i, 1] >= 3 && single_beg1_charts_df[i, 1] <= 12) {
+    sb1_age_3_12 = sb1_age_3_12 + 1
+    index_sb1_age_3_12 <- c(index_sb1_age_3_12, i)
+  } else if (single_beg1_charts_df[i, 1] >= 13 && single_beg1_charts_df[i, 1] <= 18) {
+    sb1_age_13_18 = sb1_age_13_18 + 1
+    index_sb1_age_13_18 <- c(index_sb1_age_13_18, i)
+  } else if (single_beg1_charts_df[i, 1] >= 19 && single_beg1_charts_df[i, 1] <= 29) {
+    sb1_age_19_29 = sb1_age_19_29 + 1
+    index_sb1_age_19_29 <- c(index_sb1_age_19_29, i)
+  } else if (single_beg1_charts_df[i, 1] >= 30 && single_beg1_charts_df[i, 1] <= 50) {
+    sb1_age_30_50 = sb1_age_30_50 + 1
+    index_sb1_age_30_50 <- c(index_sb1_age_30_50, i)
+  } else if (single_beg1_charts_df[i, 1] >= 51 && single_beg1_charts_df[i, 1] <= 80) {
+    sb1_age_51_80 = sb1_age_51_80 + 1
+    index_sb1_age_51_80 <- c(index_sb1_age_51_80, i)
+  }
+}
+
+
+single_beg1_age_3_12_df <- data.frame(single_beg1_charts_df[index_sb1_age_3_12,])
+single_beg1_age_13_18_df <- data.frame(single_beg1_charts_df[index_sb1_age_13_18,])
+single_beg1_age_19_29_df <- data.frame(single_beg1_charts_df[index_sb1_age_19_29,])
+single_beg1_age_30_50_df <- data.frame(single_beg1_charts_df[index_sb1_age_30_50,])
+single_beg1_age_51_80_df <- data.frame(single_beg1_charts_df[index_sb1_age_51_80,])
+
+sb1_age_3_12_ave_score <- mean(single_beg1_age_3_12_df$Average.Score, na.rm = TRUE)
+sb1_age_13_18_ave_score <- mean(single_beg1_age_13_18_df$Average.Score, na.rm = TRUE)
+sb1_age_19_29_ave_score <- mean(single_beg1_age_19_29_df$Average.Score, na.rm = TRUE)
+sb1_age_30_50_ave_score <- mean(single_beg1_age_30_50_df$Average.Score, na.rm = TRUE)
+sb1_age_51_80_ave_score <- mean(single_beg1_age_51_80_df$Average.Score, na.rm = TRUE)
+
+sb1_age_3_12_ave_accuracy <- mean(single_beg1_age_3_12_df$Average.Accuracy, na.rm = TRUE)
+sb1_age_13_18_ave_accuracy <- mean(single_beg1_age_13_18_df$Average.Accuracy, na.rm = TRUE)
+sb1_age_19_29_ave_accuracy <- mean(single_beg1_age_19_29_df$Average.Accuracy, na.rm = TRUE)
+sb1_age_30_50_ave_accuracy <- mean(single_beg1_age_30_50_df$Average.Accuracy, na.rm = TRUE)
+sb1_age_51_80_ave_accuracy <- mean(single_beg1_age_51_80_df$Average.Accuracy, na.rm = TRUE)
+
+
+sb1_age_bar_names <- c("3 - 12 Y/O", "13 - 18 Y/O", "19 - 29 Y/O", "30 - 50 Y/O", "51 - 80 Y/O")
+
+sb1_ave_score_df <- data.frame(label = sb1_age_bar_names, sb1_age_group_score = c(sb1_age_3_12_ave_score, sb1_age_13_18_ave_score, sb1_age_19_29_ave_score, sb1_age_30_50_ave_score, sb1_age_51_80_ave_score))
+
+sb1_ave_score <- c(sb1_age_3_12_ave_score, sb1_age_13_18_ave_score, sb1_age_19_29_ave_score, sb1_age_30_50_ave_score, sb1_age_51_80_ave_score)
+sb1_ave_accuracy <- c(sb1_age_3_12_ave_accuracy, sb1_age_13_18_ave_accuracy, sb1_age_19_29_ave_accuracy, sb1_age_30_50_ave_accuracy, sb1_age_51_80_ave_accuracy)
+sb1_ave_score_df <- data.frame(label = sb1_age_bar_names, Average_Score = sb1_ave_score)
+sb1_ave_accuracy_df <- data.frame(label = sb1_age_bar_names, Average_Accuracy = sb1_ave_accuracy)
+
+sb1_age_bar_df <- data.frame(sb1_age_group = sb1_age_bar_names, sb1_age_group_counter = c(sb1_age_3_12, sb1_age_13_18, sb1_age_19_29, sb1_age_30_50, sb1_age_51_80))
+
+
+
+
+# output$single_beg_1_ave_score <- renderAmCharts({
+#   amXYChart(data = sb1_ave_score_df)
+#   # amXYChart(x = "sv1_age_group", y = "sb1_age_group_score", data = sb1_ave_score_df, xlab = "Age Group", ylab = "Average Score") %>%
+#   #   amOptions(main = "Age Group vs Average Score", zoom = TRUE, scrollbar = TRUE)
+# })
+
+output$single_beg_1_ave_score <- renderAmCharts({
+  amRadar(data = sb1_ave_score_df, backTransparency = 0.9, type = "circles", col = c("#f5c542")) %>%
+            amOptions(main = "Average Score across Age Groups", creditsPosition = "bottom-right", export = TRUE)
+})
+
+output$single_beg_1_ave_accuracy <- renderAmCharts({
+  amRadar(data = sb1_ave_accuracy_df, backTransparency = 0.9, type = "circles", col = c("#a0d63c")) %>%
+          amOptions(main = "Average Accuracy across Age Groups", creditsPosition = "bottom-right", export = TRUE)
+})
+
+output$single_beg_1_age_bar <- renderAmCharts({
+  amBarplot(x = "sb1_age_group", y = "sb1_age_group_counter", data = sb1_age_bar_df, depth = 15, 
+            xlab = "Age Group", ylab = "Number of Players") %>%
+    amOptions(main = "Age Group vs Number of Players", zoom = TRUE, scrollbar = TRUE, creditsPosition = "bottom-right", export = TRUE)
+  
+})
 

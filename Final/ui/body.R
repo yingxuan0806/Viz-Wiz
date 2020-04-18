@@ -35,7 +35,33 @@ dashboardBody(
       ),
       
       h4("Ranking is determined based on High Score, followed by Accuracy, Average Time Taken per Round, then Number of Rounds Completed."),
-      dataTableOutput("single_beg_1_table")
+      dataTableOutput("single_beg_1_table"),
+      
+      h2("Demographics"),
+      
+      fluidRow(
+        column(
+          width = 4,
+          amChartsOutput("single_beg_1_ave_score")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("single_beg_1_ave_accuracy")
+        ),
+
+        column(
+          width = 4,
+          amChartsOutput("single_beg_1_age_bar")
+        )
+      )
+      # boxes need to be put in a row (or column)
+      # for column: fluidRow(
+      #                     column(
+      #                       width = 4,
+      #             box(
+      # )))
+      
     ),
     
     tabItem(
