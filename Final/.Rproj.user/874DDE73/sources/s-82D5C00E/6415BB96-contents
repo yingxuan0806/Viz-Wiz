@@ -1,0 +1,170 @@
+sbe_high_score <- max(single_expert_df["High Score"], na.rm = TRUE)
+sbe_fastest_time <- min(single_expert_df["Average Time Taken per Round (sec)"], na.rm = TRUE)
+sbe_most_rounds <- max(single_expert_df["Number of Rounds Completed"], na.rm = TRUE)
+sbe_average_score <- round(mean(single_expert_df$`Average Score`, na.rm = TRUE), digits = 2)
+sbe_average_time <- round(mean(single_expert_df$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+sbe_average_rounds <- round(mean(single_expert_df$`Number of Rounds Completed`, na.rm = TRUE), digits = 2)
+sbe_best_accuracy <- max(single_expert_df$`Accuracy Percentage`, na.rm = TRUE)
+sbe_average_accuracy <- round(mean(single_expert_df$`Accuracy Percentage`, na.rm = TRUE), digits = 2)
+
+
+# FIRST ROW
+output$single_expert_high_score <- renderInfoBox({
+  infoBox(
+    "High Score", sbe_high_score, icon = icon("star"), color = "red", fill = TRUE, width = 3
+  )
+})
+
+output$single_expert_fastest_time <- renderInfoBox({
+  infoBox("Fastest Time Taken", sbe_fastest_time, icon = icon("clock"), color = "purple", fill = TRUE, width = 3
+  )
+})
+
+output$single_expert_most_rounds <- renderInfoBox({
+  infoBox(
+    "Most Rounds Completed", sbe_most_rounds, icon = icon("check-square"), color = "yellow", fill = TRUE, width = 3
+  )
+})
+
+
+# SECOND ROW
+output$single_expert_average_score <- renderInfoBox({
+  infoBox(
+    "Average Score", sbe_average_score, icon = icon("balance-scale"), color = "blue", fill = TRUE
+  )
+})
+
+
+output$single_expert_average_time <- renderInfoBox({
+  infoBox("Average Time Taken", sbe_average_time, icon = icon("hourglass-half"), color = "olive", fill = TRUE
+  )
+})
+
+
+output$single_expert_average_rounds <- renderInfoBox({
+  infoBox(
+    "Average Rounds Completed", sbe_average_rounds, icon = icon("gamepad"), color = "maroon", fill = TRUE
+  )
+})
+
+# THIRD ROW
+output$single_expert_best_accuracy <- renderInfoBox({
+  infoBox(
+    "Best Accuracy", sbe_best_accuracy, icon = icon("bullseye"), color = "navy", fill = TRUE
+  )
+})
+
+output$single_expert_average_accuracy <- renderInfoBox({
+  infoBox(
+    "Average Accuracy", sbe_average_accuracy, icon = icon("dot-circle"), color = "navy", fill = TRUE
+  )
+})
+
+# download data
+output$single_expert_download_data <- renderInfoBox({
+  infoBox(
+    "Download Data", downloadButton("single_expert_download", "Download"), icon = icon("database"), color = "navy", fill = TRUE
+  )
+})
+# download handler
+output$single_expert_download <- downloadHandler(
+  filename = function() {
+    paste("Data - Single Expert", Sys.Date(), ".csv", sep = " ")
+  },
+  content = function(file) {
+    write.csv(single_expert_df, file)
+  }
+)
+
+# TABLE
+# TABLE
+sbe_table_shown <- single_expert_df[, c(1, 2, 3, 7, 11, 10, 6, 8, 9)]
+sbe_table_shown <- sbe_table_shown %>% arrange(desc(single_expert_df$`High Score`), desc(single_expert_df$`Accuracy Percentage`), single_expert_df$`Average Time Taken per Round (sec)`, desc(single_expert_df$`Number of Rounds Completed`), desc(single_expert_df$`Score (cumulative)`), desc(single_expert_df$`Average Score`), single_expert_df$Date)
+
+output$single_expert_table <- DT::renderDataTable(sbe_table_shown)
+
+# GRAPH
+
+min(single_expert_charts_df$Age) # 3
+max(single_expert_charts_df$Age) # 80
+
+sbe_age_3_12 <- 0
+sbe_age_13_18 <- 0
+sbe_age_19_29 <- 0
+sbe_age_30_50 <- 0
+sbe_age_51_80 <- 0
+
+index_sbe_age_3_12 <- c()
+index_sbe_age_13_18 <- c()
+index_sbe_age_19_29 <- c()
+index_sbe_age_30_50 <- c()
+index_sbe_age_51_80 <- c()
+
+
+
+for (i in 1:nrow(single_expert_charts_df)) {
+  if (single_expert_charts_df[i, 1] >= 3 && single_expert_charts_df[i, 1] <= 12) {
+    sbe_age_3_12 = sbe_age_3_12 + 1
+    index_sbe_age_3_12 <- c(index_sbe_age_3_12, i)
+  } else if (single_expert_charts_df[i, 1] >= 13 && single_expert_charts_df[i, 1] <= 18) {
+    sbe_age_13_18 = sbe_age_13_18 + 1
+    index_sbe_age_13_18 <- c(index_sbe_age_13_18, i)
+  } else if (single_expert_charts_df[i, 1] >= 19 && single_expert_charts_df[i, 1] <= 29) {
+    sbe_age_19_29 = sbe_age_19_29 + 1
+    index_sbe_age_19_29 <- c(index_sbe_age_19_29, i)
+  } else if (single_expert_charts_df[i, 1] >= 30 && single_expert_charts_df[i, 1] <= 50) {
+    sbe_age_30_50 = sbe_age_30_50 + 1
+    index_sbe_age_30_50 <- c(index_sbe_age_30_50, i)
+  } else if (single_expert_charts_df[i, 1] >= 51 && single_expert_charts_df[i, 1] <= 80) {
+    sbe_age_51_80 = sbe_age_51_80 + 1
+    index_sbe_age_51_80 <- c(index_sbe_age_51_80, i)
+  }
+}
+
+
+single_expert_age_3_12_df <- data.frame(single_expert_charts_df[index_sbe_age_3_12,])
+single_expert_age_13_18_df <- data.frame(single_expert_charts_df[index_sbe_age_13_18,])
+single_expert_age_19_29_df <- data.frame(single_expert_charts_df[index_sbe_age_19_29,])
+single_expert_age_30_50_df <- data.frame(single_expert_charts_df[index_sbe_age_30_50,])
+single_expert_age_51_80_df <- data.frame(single_expert_charts_df[index_sbe_age_51_80,])
+
+sbe_age_3_12_ave_score <- mean(single_expert_age_3_12_df$Average.Score, na.rm = TRUE)
+sbe_age_13_18_ave_score <- mean(single_expert_age_13_18_df$Average.Score, na.rm = TRUE)
+sbe_age_19_29_ave_score <- mean(single_expert_age_19_29_df$Average.Score, na.rm = TRUE)
+sbe_age_30_50_ave_score <- mean(single_expert_age_30_50_df$Average.Score, na.rm = TRUE)
+sbe_age_51_80_ave_score <- mean(single_expert_age_51_80_df$Average.Score, na.rm = TRUE)
+
+sbe_age_3_12_ave_accuracy <- mean(single_expert_age_3_12_df$Average.Accuracy, na.rm = TRUE)
+sbe_age_13_18_ave_accuracy <- mean(single_expert_age_13_18_df$Average.Accuracy, na.rm = TRUE)
+sbe_age_19_29_ave_accuracy <- mean(single_expert_age_19_29_df$Average.Accuracy, na.rm = TRUE)
+sbe_age_30_50_ave_accuracy <- mean(single_expert_age_30_50_df$Average.Accuracy, na.rm = TRUE)
+sbe_age_51_80_ave_accuracy <- mean(single_expert_age_51_80_df$Average.Accuracy, na.rm = TRUE)
+
+
+sbe_age_bar_names <- c("3 - 12 Y/O", "13 - 18 Y/O", "19 - 29 Y/O", "30 - 50 Y/O", "51 - 80 Y/O")
+
+sbe_ave_score <- c(sbe_age_3_12_ave_score, sbe_age_13_18_ave_score, sb1_age_19_29_ave_score, sbe_age_30_50_ave_score, sbe_age_51_80_ave_score)
+sbe_ave_accuracy <- c(sbe_age_3_12_ave_accuracy, sbe_age_13_18_ave_accuracy, sbe_age_19_29_ave_accuracy, sbe_age_30_50_ave_accuracy, sbe_age_51_80_ave_accuracy)
+sbe_ave_score_df <- data.frame(label = sbe_age_bar_names, Average_Score = sbe_ave_score)
+sbe_ave_accuracy_df <- data.frame(label = sbe_age_bar_names, Average_Accuracy = sbe_ave_accuracy)
+
+sbe_age_bar_df <- data.frame(sbe_age_group = sbe_age_bar_names, sbe_age_group_counter = c(sbe_age_3_12, sbe_age_13_18, sbe_age_19_29, sbe_age_30_50, sbe_age_51_80))
+
+
+output$single_expert_ave_score <- renderAmCharts({
+  amRadar(data = sbe_ave_score_df, backTransparency = 0.9, type = "circles", col = c("#f5c542")) %>%
+    amOptions(main = "Average Score across Age Groups", creditsPosition = "bottom-right", export = TRUE)
+})
+
+output$single_expert_ave_accuracy <- renderAmCharts({
+  amRadar(data = sbe_ave_accuracy_df, backTransparency = 0.9, type = "circles", col = c("#a0d63c")) %>%
+    amOptions(main = "Average Accuracy across Age Groups", creditsPosition = "bottom-right", export = TRUE)
+})
+
+output$single_expert_age_bar <- renderAmCharts({
+  amBarplot(x = "sbe_age_group", y = "sbe_age_group_counter", data = sbe_age_bar_df, depth = 15, 
+            xlab = "Age Group", ylab = "Number of Players") %>%
+    amOptions(main = "Age Group vs Number of Players", zoom = TRUE, scrollbar = TRUE, creditsPosition = "bottom-right", export = TRUE)
+  
+})
+

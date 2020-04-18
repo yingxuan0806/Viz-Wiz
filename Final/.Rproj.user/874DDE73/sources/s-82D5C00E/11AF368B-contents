@@ -55,7 +55,7 @@ output$multi_novice_best_accuracy <- renderInfoBox({
 
 output$multi_novice_average_accuracy <- renderInfoBox({
   infoBox(
-    "Average Accuracy", mbn_average_accuracy, icon = icon("dot-circle"), color = "navy", fill = TRUE
+    "Average Accuracy", mbn_average_accuracy, icon = icon("dot-circle"), color = "black", fill = TRUE
   )
 })
 

@@ -78,6 +78,7 @@ dashboardBody(
         infoBoxOutput("single_beg_2_average_accuracy"),
         infoBoxOutput("single_beg_2_download_data")
       ),
+      h4("Ranking is determined based on High Score, followed by Accuracy, Average Time Taken per Round, then Number of Rounds Completed."),
       dataTableOutput("single_beg_2_table"),
       
       h2("Demographics"),
@@ -121,6 +122,7 @@ dashboardBody(
         infoBoxOutput("single_novice_average_accuracy"),
         infoBoxOutput("single_novice_download_data")
       ),
+      h4("Ranking is determined based on High Score, followed by Accuracy, Average Time Taken per Round, then Number of Rounds Completed."),
       dataTableOutput("single_novice_table"),
       h2("Demographics"),
       
@@ -163,6 +165,7 @@ dashboardBody(
         infoBoxOutput("single_expert_average_accuracy"),
         infoBoxOutput("single_expert_download_data")
       ),
+      h4("Ranking is determined based on High Score, followed by Accuracy, Average Time Taken per Round, then Number of Rounds Completed."),
       dataTableOutput("single_expert_table"),
       h2("Demographics"),
       
@@ -205,7 +208,27 @@ dashboardBody(
         infoBoxOutput("multi_beg_1_average_accuracy"),
         infoBoxOutput("multi_beg_1_download_data")
       ),
-      dataTableOutput("multi_beg_1_table")
+      h4("Ranking is determined based on High Score, followed by Accuracy, Average Time Taken per Round, then Number of Rounds Completed."),
+      dataTableOutput("multi_beg_1_table"),
+      h2("Demographics"),
+      
+      fluidRow(
+        column(
+          width = 4,
+          amChartsOutput("multi_beg_1_ave_score")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("multi_beg_1_ave_accuracy")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("multi_beg_1_age_bar")
+        )
+      )
+      
     ),
 
     tabItem(
@@ -229,7 +252,26 @@ dashboardBody(
         infoBoxOutput("multi_beg_2_average_accuracy"),
         infoBoxOutput("multi_beg_2_download_data")
       ),
-      dataTableOutput("multi_beg_2_table")
+      h4("Ranking is determined based on High Score, followed by Accuracy, Average Time Taken per Round, then Number of Rounds Completed."),
+      dataTableOutput("multi_beg_2_table"),
+      h2("Demographics"),
+      
+      fluidRow(
+        column(
+          width = 4,
+          amChartsOutput("multi_beg_2_ave_score")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("multi_beg_2_ave_accuracy")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("multi_beg_2_age_bar")
+        )
+      )
     ),
 
     tabItem(
@@ -253,7 +295,26 @@ dashboardBody(
         infoBoxOutput("multi_novice_average_accuracy"),
         infoBoxOutput("multi_novice_download_data")
       ),
-      dataTableOutput("multi_novice_table")
+      h4("Ranking is determined based on High Score, followed by Accuracy, Average Time Taken per Round, then Number of Rounds Completed."),
+      dataTableOutput("multi_novice_table"),
+      h2("Demographics"),
+      
+      fluidRow(
+        column(
+          width = 4,
+          amChartsOutput("multi_novice_ave_score")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("multi_novice_ave_accuracy")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("multi_novice_age_bar")
+        )
+      )
     ),
 
     tabItem(
@@ -277,7 +338,26 @@ dashboardBody(
         infoBoxOutput("multi_expert_average_accuracy"),
         infoBoxOutput("multi_expert_download_data")
       ),
-      dataTableOutput("multi_expert_table")
+      h4("Ranking is determined based on High Score, followed by Accuracy, Average Time Taken per Round, then Number of Rounds Completed."),
+      dataTableOutput("multi_expert_table"),
+      h2("Demographics"),
+      
+      fluidRow(
+        column(
+          width = 4,
+          amChartsOutput("multi_expert_ave_score")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("multi_expert_ave_accuracy")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("multi_expert_age_bar")
+        )
+      )
     ),
 
     tabItem(

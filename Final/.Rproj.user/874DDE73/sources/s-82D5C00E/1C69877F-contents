@@ -55,7 +55,7 @@ output$multi_novice_best_accuracy <- renderInfoBox({
 
 output$multi_novice_average_accuracy <- renderInfoBox({
   infoBox(
-    "Average Accuracy", mbn_average_accuracy, icon = icon("dot-circle"), color = "navy", fill = TRUE
+    "Average Accuracy", mbn_average_accuracy, icon = icon("dot-circle"), color = "black", fill = TRUE
   )
 })
 
@@ -79,7 +79,7 @@ output$multi_novice_download <- downloadHandler(
 mbn_table_shown <- multi_novice_df[, c(1, 2, 3, 7, 11, 10, 6, 8, 9)]
 mbn_table_shown <- mbn_table_shown %>% arrange(desc(multi_novice_df$`High Score`), desc(multi_novice_df$`Accuracy Percentage`), multi_novice_df$`Average Time Taken per Round (sec)`, desc(multi_novice_df$`Number of Rounds Completed`), desc(multi_novice_df$`Score (cumulative)`), desc(multi_novice_df$`Average Score`), multi_novice_df$Date)
 
-output$multi_novice_table <- DT::renderDataTable(mbn_table_shown)
+output$multi_novice_table <- DT::renderDataTable(multi_novice_df)
 
 # GRAPH
 
