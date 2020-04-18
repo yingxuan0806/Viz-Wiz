@@ -149,8 +149,6 @@ sb1_age_51_80_ave_accuracy <- mean(single_beg1_age_51_80_df$Average.Accuracy, na
 
 sb1_age_bar_names <- c("3 - 12 Y/O", "13 - 18 Y/O", "19 - 29 Y/O", "30 - 50 Y/O", "51 - 80 Y/O")
 
-sb1_ave_score_df <- data.frame(label = sb1_age_bar_names, sb1_age_group_score = c(sb1_age_3_12_ave_score, sb1_age_13_18_ave_score, sb1_age_19_29_ave_score, sb1_age_30_50_ave_score, sb1_age_51_80_ave_score))
-
 sb1_ave_score <- c(sb1_age_3_12_ave_score, sb1_age_13_18_ave_score, sb1_age_19_29_ave_score, sb1_age_30_50_ave_score, sb1_age_51_80_ave_score)
 sb1_ave_accuracy <- c(sb1_age_3_12_ave_accuracy, sb1_age_13_18_ave_accuracy, sb1_age_19_29_ave_accuracy, sb1_age_30_50_ave_accuracy, sb1_age_51_80_ave_accuracy)
 sb1_ave_score_df <- data.frame(label = sb1_age_bar_names, Average_Score = sb1_ave_score)

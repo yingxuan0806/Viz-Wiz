@@ -55,13 +55,6 @@ dashboardBody(
           amChartsOutput("single_beg_1_age_bar")
         )
       )
-      # boxes need to be put in a row (or column)
-      # for column: fluidRow(
-      #                     column(
-      #                       width = 4,
-      #             box(
-      # )))
-      
     ),
     
     tabItem(
@@ -85,7 +78,26 @@ dashboardBody(
         infoBoxOutput("single_beg_2_average_accuracy"),
         infoBoxOutput("single_beg_2_download_data")
       ),
-      dataTableOutput("single_beg_2_table")
+      dataTableOutput("single_beg_2_table"),
+      
+      h2("Demographics"),
+      
+      fluidRow(
+        column(
+          width = 4,
+          amChartsOutput("single_beg_2_ave_score")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("single_beg_2_ave_accuracy")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("single_beg_2_age_bar")
+        )
+      )
     ),
 
     tabItem(
@@ -109,7 +121,25 @@ dashboardBody(
         infoBoxOutput("single_novice_average_accuracy"),
         infoBoxOutput("single_novice_download_data")
       ),
-      dataTableOutput("single_novice_table")
+      dataTableOutput("single_novice_table"),
+      h2("Demographics"),
+      
+      fluidRow(
+        column(
+          width = 4,
+          amChartsOutput("single_novice_ave_score")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("single_novice_ave_accuracy")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("single_novice_age_bar")
+        )
+      )
     ),
 
     tabItem(
@@ -133,7 +163,25 @@ dashboardBody(
         infoBoxOutput("single_expert_average_accuracy"),
         infoBoxOutput("single_expert_download_data")
       ),
-      dataTableOutput("single_expert_table")
+      dataTableOutput("single_expert_table"),
+      h2("Demographics"),
+      
+      fluidRow(
+        column(
+          width = 4,
+          amChartsOutput("single_expert_ave_score")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("single_expert_ave_accuracy")
+        ),
+        
+        column(
+          width = 4,
+          amChartsOutput("single_expert_age_bar")
+        )
+      )
     ),
 
     tabItem(

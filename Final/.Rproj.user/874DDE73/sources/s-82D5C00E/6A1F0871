@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587222358677.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "919654146",
+    "id" : "6A1F0871",
+    "lastKnownWriteTime" : 1587222726,
+    "last_content_update" : 1587222726483,
+    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/Final/server/single_expert.R",
+    "project_path" : "server/single_expert.R",
+    "properties" : {
+        "cursorPosition" : "74,30",
+        "scrollLine" : "63",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
