@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587196232339.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C86693EE",
+    "lastKnownWriteTime" : 1587196291,
+    "last_content_update" : 1587196291187,
+    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/Final/server/multi_novice.R",
+    "project_path" : "server/multi_novice.R",
+    "properties" : {
+        "cursorPosition" : "69,0",
+        "scrollLine" : "35",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

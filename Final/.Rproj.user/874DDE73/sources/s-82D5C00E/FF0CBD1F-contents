@@ -1,0 +1,24 @@
+rm(list=ls())
+setwd("~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/Final")
+
+if(!require(shiny)) {
+  install.packages("shiny")
+  library(shiny)
+}
+
+if(!require(shinydashboard)) {
+  install.packages("shinydashboard")
+  library(shinydashboard)
+}
+
+ui <- dashboardPage(
+  source(file.path("ui", "header.R"), local = TRUE)$value,
+  source(file.path("ui", "sidebar.R"), local = TRUE)$value,
+  source(file.path("ui", "body.R"), local = TRUE)$value
+)
+
+server <- function(input, output) {
+  source(file.path("server", "single_beg_1.R"), local = TRUE)$value
+}
+
+shinyApp(ui = ui, server = server)

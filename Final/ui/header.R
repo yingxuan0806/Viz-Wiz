@@ -1,0 +1,3 @@
+dashboardHeader(
+  title = "Viz-Wiz"
+)

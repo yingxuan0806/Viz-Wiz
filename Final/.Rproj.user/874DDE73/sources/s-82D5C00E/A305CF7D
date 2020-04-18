@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587153581193.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A305CF7D",
+    "lastKnownWriteTime" : 1587196408,
+    "last_content_update" : 1587196408500,
+    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/Final/ui/body.R",
+    "project_path" : "ui/body.R",
+    "properties" : {
+        "cursorPosition" : "203,41",
+        "scrollLine" : "171",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

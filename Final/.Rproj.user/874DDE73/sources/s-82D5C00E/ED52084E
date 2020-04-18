@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587196059616.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "ED52084E",
+    "lastKnownWriteTime" : 1587196205,
+    "last_content_update" : 1587196205829,
+    "path" : "~/Documents/SUTD/Term 5/ESA/Project/Viz-Wiz/Final/server/multi_beg_2.R",
+    "project_path" : "server/multi_beg_2.R",
+    "properties" : {
+        "cursorPosition" : "64,23",
+        "scrollLine" : "38",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
