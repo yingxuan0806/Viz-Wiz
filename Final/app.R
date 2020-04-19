@@ -31,12 +31,7 @@ if(!require(rAmCharts)) {
   library(rAmCharts)
 }
 
-# name_list <- c("A", "B", "C")
-name_list <- c("Amy", "Bonnie", "Emma", "Jack", "James", "Lina", "Wayne")
-# aname_list <- c(unique(df["Name"]))
-# aname_list <- as.vector(unlist(aname_list))
-# name_list <- unlist(name_list, use.names = FALSE)
-
+# leaderboards
 df <- read_xlsx("Dataset.xlsx")
 df[9] <- round(df[9], digits = 2)
 single_df <- df[df$`Mode of Play` == "Single",]
@@ -68,26 +63,33 @@ multi_beg2_charts_df <- multi_charts_df[multi_charts_df$`Difficulty Level` == "B
 multi_novice_charts_df <- multi_charts_df[multi_charts_df$`Difficulty Level` == "Novice",]
 multi_expert_charts_df <- multi_charts_df[multi_charts_df$`Difficulty Level` == "Expert",]
 
-min(charts_df$Age) # 3
-max(charts_df$Age) # 80
-age_3_12 <- 0
-age_13_18 <- 0
-age_19_29 <- 0
-age_30_50 <- 0
-age_51_80 <- 0
-for (i in 1:nrow(charts_df)) {
-  if (charts_df[i, 1] >= 3 && charts_df[i, 1] <= 12) {
-    age_3_12 = age_3_12 + 1
-  } else if (charts_df[i, 1] >= 13 && charts_df[i, 1] <= 18) {
-    age_13_18 = age_13_18 + 1
-  } else if (charts_df[i, 1] >= 19 && charts_df[i, 1] <= 29) {
-    age_19_29 = age_19_29 + 1
-  } else if (charts_df[i, 1] >= 30 && charts_df[i, 1] <= 50) {
-    age_30_50 = age_30_50 + 1
-  } else if (charts_df[i, 1] >= 51 && charts_df[i, 1] <= 80) {
-    age_51_80 = age_51_80 + 1
-  }
-}
+# personal progress dashboard
+name_list <- c("Overall", "Amy", "Bonnie", "Emma", "Jack", "James", "Lina", "Wayne")
+game_mode <- c("Overall", "Single", "Multiplayer")
+difficulty_level <- c("Overall", "Beginner 1", "Beginner 2","Novice", "Expert")
+
+
+# Player demographics
+# min(charts_df$Age) # 3
+# max(charts_df$Age) # 80
+# age_3_12 <- 0
+# age_13_18 <- 0
+# age_19_29 <- 0
+# age_30_50 <- 0
+# age_51_80 <- 0
+# for (i in 1:nrow(charts_df)) {
+#   if (charts_df[i, 1] >= 3 && charts_df[i, 1] <= 12) {
+#     age_3_12 = age_3_12 + 1
+#   } else if (charts_df[i, 1] >= 13 && charts_df[i, 1] <= 18) {
+#     age_13_18 = age_13_18 + 1
+#   } else if (charts_df[i, 1] >= 19 && charts_df[i, 1] <= 29) {
+#     age_19_29 = age_19_29 + 1
+#   } else if (charts_df[i, 1] >= 30 && charts_df[i, 1] <= 50) {
+#     age_30_50 = age_30_50 + 1
+#   } else if (charts_df[i, 1] >= 51 && charts_df[i, 1] <= 80) {
+#     age_51_80 = age_51_80 + 1
+#   }
+# }
 
 
 
@@ -97,7 +99,7 @@ ui <- dashboardPage(
   source(file.path("ui", "body.R"), local = TRUE)$value
 )
 
-server <- function(input, output) {
+server <- function(input, output, session) {
   source(file.path("server", "single_beg_1.R"), local = TRUE)$value
   source(file.path("server", "single_beg_2.R"), local = TRUE)$value
   source(file.path("server", "single_novice.R"), local = TRUE)$value

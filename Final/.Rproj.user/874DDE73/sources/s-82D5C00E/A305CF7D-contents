@@ -368,24 +368,72 @@ dashboardBody(
       #                       width = 4,
       #             box(
       # )))
-      selectInput(
-        inputId = "names",
-        label = "Names",
-        choices = name_list,
-        selected = NULL,
-        selectize = FALSE
-      ),
-
+      
       fluidRow(
+        box(
+          width = 3,
+          selectInput(
+            inputId = "names",
+            label = "Names",
+            choices = name_list,
+            selected = NULL,
+            selectize = FALSE
+          ),
+          
+          selectInput(
+            inputId = "game_mode",
+            label = "Mode of Play",
+            choices = game_mode,
+            selected = NULL,
+            selectize = FALSE
+          ),
+          
+          selectInput(
+            inputId = "difficulty_level",
+            label = "Difficulty Level",
+            choices = difficulty_level,
+            selected = NULL,
+            selectize = FALSE
+          ) 
+        ),
+        
+        valueBoxOutput("total_games", width = 3),
+        valueBoxOutput("high_score", width = 3),
+        valueBoxOutput("best_accuracy", width = 3),
+        valueBoxOutput("total_rounds", width = 3),
+        valueBoxOutput("average_score", width = 3),
+        valueBoxOutput("average_accuracy", width = 3),
+        valueBoxOutput("best_time", width = 3),
+        valueBoxOutput("average_time", width = 3),
+        valueBoxOutput("dash_download_data", width = 3)
+      ),
+      dataTableOutput("name_table_shown"),
+      h2("Overall Statistics"),
+      fluidRow(
+        column(
+          width = 6,
+          amChartsOutput("games_time_series"),
+          h2(),
+          amChartsOutput("accuracy_time_series")
+        ),
+        column(
+          width = 6,
+          amChartsOutput("score_time_series"),
+          h2(),
+          amChartsOutput("time_taken_time_series")
+        )
+      )
+
+      # fluidRow(
         #static info box
         # infoBox("Total Games Played", 10 * 2, icon = icon("credit-card")),
 
         #dynamic info box
-        infoBoxOutput("dash_total_gamesBox"),
+        # infoBoxOutput("dash_total_gamesBox"),
         # infoBoxOutput("progressBox"),
-        infoBoxOutput("dash_high_scoreBox"),
-        infoBoxOutput("dash_average_scoreBox"),
-      ),
+      #   infoBoxOutput("dash_high_scoreBox"),
+      #   infoBoxOutput("dash_average_scoreBox"),
+      # ),
 
       # fluidRow(
       #   box(
@@ -407,6 +455,7 @@ dashboardBody(
       #     sliderInput("slider", "Number of observations:", 1, 100, 50)
       #   )
       # ),
+      
     ),
 
     tabItem(

@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587282941275.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "662BE014",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1587282941275,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "A82BC26A",
+        "caption" : "game_df",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=game_df&cache_key=A82BC26A",
+        "displayedObservations" : 334,
+        "environment" : "",
+        "expression" : "game_df",
+        "object" : "game_df",
+        "preview" : 0,
+        "totalObservations" : 334,
+        "variables" : 5
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

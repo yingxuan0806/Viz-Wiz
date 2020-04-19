@@ -1,0 +1,37 @@
+average_time_value <- round(mean(df$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+if (input$names != "Overall") {
+  name_df <- df[df$Name == input$names,]
+  average_time_value <- round(mean(name_df$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+  
+  if (input$game_mode != "Overall") {
+    mode_df <- name_df[name_df$`Mode of Play` == input$game_mode, ]
+    average_time_value <- round(mean(mode_df$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+  } else if (input$game_mode == "Overall") {
+    mode_df <- name_df
+    average_time_value <- round(mean(mode_df$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+  }
+  
+  if (input$difficulty_level != "Overall") {
+    average_time_value <- round(mean(mode_df[mode_df$`Difficulty Level` == input$difficulty_level,]$`Average Time Taken per Round (sec)`, na.rm = TRUE), diigts = 2)
+  } else if (input$difficulty_level == "Overall") {
+    average_time_value <- round(mean(mode_df$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+  }
+}
+
+if (input$names == "Overall") {
+  average_time_value <- round(mean(df$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+  
+  if (input$game_mode != "Overall") {
+    mode_df <- df[df$`Mode of Play` == input$game_mode, ]
+    average_time_value <- round(mean(mode_df$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+  } else if (input$game_mode == "Overall") {
+    mode_df <- df
+    average_time_value <- round(mean(mode_df$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+  }
+  
+  if (input$difficulty_level != "Overall") {
+    average_time_value <- round(mean(mode_df[mode_df$`Difficulty Level` == input$difficulty_level, ]$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+  } else if (input$difficulty_level == "Overall") {
+    average_time_value <- round(mean(mode_df$`Average Time Taken per Round (sec)`, na.rm = TRUE), digits = 2)
+  }
+}

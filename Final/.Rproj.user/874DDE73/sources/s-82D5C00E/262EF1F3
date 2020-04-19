@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1587283498990.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "262EF1F3",
+    "lastKnownWriteTime" : 1587283094,
+    "last_content_update" : 1587283498990,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E4F9990A",
+        "caption" : "games_df_global_shown",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=games_df_global_shown&cache_key=E4F9990A",
+        "displayedObservations" : 50,
+        "environment" : "",
+        "expression" : "games_df_global_shown",
+        "object" : "games_df_global_shown",
+        "preview" : 0,
+        "totalObservations" : 50,
+        "variables" : 3
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

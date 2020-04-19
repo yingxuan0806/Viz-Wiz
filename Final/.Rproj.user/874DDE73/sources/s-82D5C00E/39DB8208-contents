@@ -16,7 +16,7 @@ output$multi_novice_high_score <- renderInfoBox({
 })
 
 output$multi_novice_fastest_time <- renderInfoBox({
-  infoBox("Fastest Time Taken", paste(as.character(mbn_fastest_time), "s"), icon = icon("clock"), color = "purple", fill = TRUE
+  infoBox("Fastest Time Taken", mbn_fastest_time, icon = icon("clock"), color = "purple", fill = TRUE
   )
 })
 
@@ -35,7 +35,7 @@ output$multi_novice_average_score <- renderInfoBox({
 
 
 output$multi_novice_average_time <- renderInfoBox({
-  infoBox("Average Time Taken", paste(as.character(mbn_average_time), "s"), icon = icon("hourglass-half"), color = "olive", fill = TRUE
+  infoBox("Average Time Taken", mbn_average_time, icon = icon("hourglass-half"), color = "olive", fill = TRUE
   )
 })
 
@@ -49,13 +49,13 @@ output$multi_novice_average_rounds <- renderInfoBox({
 # THIRD ROW
 output$multi_novice_best_accuracy <- renderInfoBox({
   infoBox(
-    "Best Accuracy", paste(as.character(mbn_best_accuracy), "%"), icon = icon("bullseye"), color = "navy", fill = TRUE
+    "Best Accuracy", mbn_best_accuracy, icon = icon("bullseye"), color = "navy", fill = TRUE
   )
 })
 
 output$multi_novice_average_accuracy <- renderInfoBox({
   infoBox(
-    "Average Accuracy", paste(as.character(mbn_average_accuracy), "%"), icon = icon("dot-circle"), color = "navy", fill = TRUE
+    "Average Accuracy", mbn_average_accuracy, icon = icon("dot-circle"), color = "navy", fill = TRUE
   )
 })
 
