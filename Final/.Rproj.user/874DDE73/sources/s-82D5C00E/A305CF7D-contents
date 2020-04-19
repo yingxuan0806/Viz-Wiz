@@ -7,10 +7,10 @@ dashboardBody(
       tabName = "home",
       h2("Welcome to Viz-Wiz Leaderboards and Personal Progress Tracker!"),
       h4("To begin, select a tab on the navigation bar located on the left."),
-      h4("Please maximise the app screen for the best view."),
+      h4("Please maximise the app screen for the best view.")
       # img(src = 'home.jpg', align = "middle", height = 600, width = 600)
       # , align = "middle", alt = " ", height = "80%", width = "auto"
-      shiny::img(src = "home.jpg", align = "middle", height = "80%", width = 500)
+      # shiny::img(src = "home.jpg", align = "middle", height = "80%", width = 500)
     ),
     
     tabItem(
