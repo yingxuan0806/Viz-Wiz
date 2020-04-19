@@ -600,3 +600,9 @@ output$time_taken_time_series <- renderAmCharts(
                creditsPosition = "bottom-right", export = TRUE,
                scrollbar = TRUE, scrollbarPosition = "bottom")
 )
+
+
+
+
+
+
