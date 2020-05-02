@@ -10,7 +10,9 @@ Team 14 Viz-Wiz
 
 ## Online Host
 
-https://yingxuan0806.shinyapps.io/final/
+<a target="_blank" href="https://yingxuan0806.shinyapps.io/final/">R-Shiny app</a>
+
+
 
 ## Run Locally
 
