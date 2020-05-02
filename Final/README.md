@@ -8,9 +8,12 @@ Team 14 Viz-Wiz
 
 
 
-## How to run the R-Shiny App
+## Online Host
+
+https://yingxuan0806.shinyapps.io/final/
+
+## Run Locally
 
 1. Using R Studio, set your working directory in Line 2 of `app.R`
 2. Run `app.R.`file
 
-Note: Please run the entire `app.R` script file instead of clicking on the `Run App` option.
