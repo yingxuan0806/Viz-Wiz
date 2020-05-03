@@ -1,4 +1,6 @@
-ESA Project on Visual Proficiency: Viz-Wiz
+ESA Project on Visual Proficiency
+
+Home Page: [Viz-Wiz](https://yingxuan0806.github.io/Viz-Wiz/)
 
 # About
 
@@ -7,12 +9,16 @@ An educational game for visual proficiency
 - two game modes: single and multiplayer (up to 4)
 - four difficulty levels: Beginner I, Beginner II, Novice, Expert
 
-It is a potential startup idea that I am currently looking into - a one stop platform that:
 
-- provides training through game play
+
+## Potential Startup Idea
+
+Currently looking into a one stop platform that:
+
+- provides training on cognitive skills through game play
 - gives personalised feedback and suggestions for improvement based on accumulated play
 
-To be expanded to more types of cognitive skills, not just limiting to visual proficiency:
+To be expanded to more aspects of cognitive skills, not just limiting to visual proficiency:
 
 - deductive reasoning
 - inductive reasoning
@@ -36,7 +42,9 @@ However the current idea of having hardware component is not exactly feasible
 
 # Prototype
 
-## Game Interface
+## Game Interface 
+
+[Adobe Xd](https://xd.adobe.com/view/0289e485-b621-49d9-51f0-47c2d7748d81-74b8/?fullscreen&hints=off)
 
 - not all buttons are functional because no time to build all frames
 
@@ -60,9 +68,17 @@ A future enhancement on the personal user dashboard is to provide feedback to th
 
 ## Game System Architecture
 
+[Prototype](https://yingxuan0806.github.io/Viz-Wiz/)
+
 - game rules, instructions, setup
 - examples of game questions for each difficulty level
 - design journey of creating this game
+
+## Capella: System Definition Documents
+
+system design of creating this game
+
+[Capella Model](https://yingxuan0806.github.io/Viz-Wiz-SDD/)
 
 # Contact
 
