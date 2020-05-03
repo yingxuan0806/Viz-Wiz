@@ -80,6 +80,13 @@ system design of creating this game
 
 [Capella Model](https://yingxuan0806.github.io/Viz-Wiz-SDD/)
 
+## Presentation Deck
+
+[pdf](https://github.com/yingxuan0806/Viz-Wiz/blob/master/Prototype%20Submission/Presentation%20pitch%20deck.pdf)
+
+- pitch
+- design journey
+
 # Contact
 
 yingxuan.yeo@gmail.com
