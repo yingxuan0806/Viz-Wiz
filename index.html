@@ -12,7 +12,7 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="../home.css">
+    <link rel="stylesheet" href="home.css">
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
@@ -33,54 +33,60 @@
 
             <ul class="list-unstyled components">
                 <h3> Viz-Wiz</h3>
-                <li>
-                    <a href="../index.html">Home</a>
+                <li class="active">
+                    <a class="active" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="../About/about_game.html">About</a>
+                    <a href="About/about_game.html">About</a>
                 </li>
                 <li>
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Game Rules</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="../Game Rules/instructions.html">Instructions & Setup</a>
+                            <a href="Game Rules/instructions.html">Instructions & Setup</a>
                         </li>
                         <li>
-                            <a href="../Game Rules/user_interface.html">User Interface</a>
+                            <a href="Game Rules/user_interface.html">User Interface</a>
                         </li>
+                        <!-- <li>
+                            <a href="Game Rules/Novice_multi.html">Novice</a>
+                        </li>
+                        <li>
+                            <a href="Game Rules/Expert_multi.html">Expert</a>
+                        </li> -->
                     </ul>
                 </li>
-                <li class="active">
-                    <a class="active" href="Game_design.html">Game Board & Pieces Design</a>
+                <li>
+                    <a href="Game Board & Pieces Design/Game_design.html">Game Board & Pieces Design</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Card Design</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
-                            <a href="../Card Design/Beg.html">Beginner I & II</a>
+                            <a href="Card Design/Beg.html">Beginner I & II</a>
                         </li>
                         <li>
-                            <a href="../Card Design/Novice.html">Novice</a>
+                            <a href="Card Design/Novice.html">Novice</a>
                         </li>
                         <li>
-                            <a href="../Card Design/Expert.html">Expert</a>
+                            <a href="Card Design/Expert.html">Expert</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="../Artwork/artwork_system.html">Artwork</a>
+                    <a href="Artwork/artwork_system.html">Artwork</a>
                 </li>
                 <li>
-                    <a href="../Bibliography/bibliography.html">Bibliography</a>
+                    <a href="Bibliography/bibliography.html">Bibliography</a>
                 </li>
             </ul>
 
             <ul class="list-unstyled CTAs">
                 <!-- <li>
                     <a href="https://github.com/yingxuan0806/Viz-Wiz/tree/master/Final" class="download" target="_blank">R-Shiny</a>
-                </li>
-                <li>
-                    <a href="https://github.com/yingxuan0806/Viz-Wiz/tree/master/System%20Definition%20Documents" class="download" target="_blank">System Definition Documents</a>
+                </li> -->
+                <!-- <li>
+                    <a href="https://yingxuan0806.github.io/Viz-Wiz/" class="download" target="_blank">Game Prototype</a>
                 </li> -->
                 <li>
                     <a href="https://xd.adobe.com/view/0289e485-b621-49d9-51f0-47c2d7748d81-74b8/?fullscreen&hints=off" class="download" target="_blank">Game Interface</a>
@@ -88,6 +94,9 @@
                 <li>
                     <a href="https://yingxuan0806.shinyapps.io/final/" class="download" target="_blank">R-Shiny</a>
                 </li>
+                <!-- <li>
+                    <a href="https://github.com/yingxuan0806/Viz-Wiz/tree/master/System%20Definition%20Documents" class="download" target="_blank">System Definition Documents</a>
+                </li> -->
                 <li>
                     <a href="https://yingxuan0806.github.io/Viz-Wiz-SDD/" class="download" target="_blank">System Definition Documents</a>
                 </li>
@@ -111,25 +120,14 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="Game_design.html">Hardware</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Game_design_software.html">Software</a>
+                                <a class="nav-link" href="index.html">Home</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <h2>Game System Design</h2>
-            <h5>Hardware: Game Pieces Design</h5>
-            <p>Two hardware game pieces are required for Viz-Wiz - tray and cubes.</p>
-            <p>Each player will receive a tray and 16 cubes. Each set of tray and cubes are categorised by colour. </p>
-            <img src="dimensions.jpg" width=90%, height=90%>
+            <img src="home.jpg" width=50% height=50%>
             <div class="line"></div>
-            <p>Considerations leading to this final design on game pieces can be found under <a href="../Artwork/artwork_system.html">Artwork - Game System (click me!)</a>.</p>
-            <div class="line"></div>
-
-
         </div>
     </div>
 
