@@ -82,7 +82,7 @@ system design of creating this game
 
 ## Presentation Deck
 
-[pdf](https://github.com/yingxuan0806/Viz-Wiz/blob/master/Prototype%20Submission/Presentation%20pitch%20deck.pdf)
+[pdf](https://yingxuan0806.github.io/Viz-Wiz/Presentation%20pitch%20deck.pdf)
 
 - pitch
 - design journey
